@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">कृषि चेन</string>
+    <string name="app_intro">ब्लॉकचेन आधारित कृषि आपूर्ति श्रृंखला</string>
+    <string name="benefits_title">लाभ</string>
+    <string name="benefit_1">फसल की उत्पत्ति और गुणवत्ता ट्रेस करें</string>
+    <string name="benefit_2">किसानों के लिए आसान बैच प्रबंधन</string>
+    <string name="benefit_3">डिस्ट्रीब्यूटर/रिटेलर के लिए सुरक्षित ट्रांसफर</string>
+    <string name="benefit_4">उपभोक्ता प्रतिक्रिया और विश्वास</string>
+    <string name="login_register">लॉगिन / रजिस्टर</string>
+    <string name="select_role">अपना रोल चुनें</string>
+    <string name="role_farmer">किसान</string>
+    <string name="role_distributor">डिस्ट्रीब्यूटर</string>
+    <string name="role_retailer">रिटेलर</string>
+    <string name="role_consumer">उपभोक्ता</string>
+    <string name="login_title">लॉगिन</string>
+    <string name="phone_email">फोन या ईमेल</string>
+    <string name="login">लॉगिन</string>
+    <string name="register_title">रजिस्टर</string>
+    <string name="farmer_card_number">किसान कार्ड नंबर (KCC)</string>
+    <string name="gstin">GSTIN</string>
+    <string name="shop_license">दुकान लाइसेंस / GST</string>
+    <string name="phone_google_id">फोन या गूगल आईडी</string>
+    <string name="register">रजिस्टर</string>
+    <string name="error_empty_field">कृपया सभी फ़ील्ड भरें</string>
+</resources>

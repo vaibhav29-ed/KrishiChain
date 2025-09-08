@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">KrishiChain</string>
+    <string name="app_intro">Blockchain-powered agri supply chain for trust, traceability, and transparency.</string>
+    <string name="benefits_title">Benefits</string>
+    <string name="benefit_1">Trace crop origin and quality</string>
+    <string name="benefit_2">Easy batch management for farmers</string>
+    <string name="benefit_3">Secure transfer for distributors/retailers</string>
+    <string name="benefit_4">Consumer feedback and trust</string>
+    <string name="login_register">Login / Register</string>
+    <string name="select_role">Select your role</string>
+    <string name="role_farmer">Farmer</string>
+    <string name="role_distributor">Distributor</string>
+    <string name="role_retailer">Retailer</string>
+    <string name="role_consumer">Consumer</string>
+    <string name="login_title">Login</string>
+    <string name="phone_email">Phone or Email</string>
+    <string name="login">Login</string>
+    <string name="register_title">Register</string>
+    <string name="farmer_card_number">Farmer Card Number (KCC)</string>
+    <string name="gstin">GSTIN</string>
+    <string name="shop_license">Shop License / GST</string>
+    <string name="phone_google_id">Phone or Google ID</string>
+    <string name="register">Register</string>
+    <string name="error_empty_field">Please fill all fields</string>
+</resources>
