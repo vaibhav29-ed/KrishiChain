@@ -1,7 +1,6 @@
 package com.example.krishichain
 
 import androidx.compose.runtime.Composable
-import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavType
 import androidx.navigation.compose.*
 import com.example.krishichain.navigation.NavRoutes
@@ -9,27 +8,29 @@ import com.example.krishichain.ui.screens.*
 
 @Composable
 fun KrishiChainAppNav() {
-    val navController = rememberNavController()
-    NavHost(navController, startDestination = NavRoutes.Launch) {
-        composable(NavRoutes.Launch) { LaunchScreen(navController) }
-        composable(NavRoutes.Login) { LoginScreen(navController) }
-        composable(NavRoutes.Register) { RegisterScreen(navController) }
-        composable(NavRoutes.RoleSelect) { RoleSelectScreen(navController) }
-        composable(NavRoutes.FarmerDashboard) { FarmerDashboardScreen(navController) }
-        composable(NavRoutes.CreateBatch) { CreateBatchScreen(navController) }
+    val nav = rememberNavController()
+    NavHost(nav, startDestination = NavRoutes.Launch) {
+        listOf(
+            NavRoutes.Launch to { LaunchScreen(nav) },
+            NavRoutes.Login to { LoginScreen(nav) },
+            NavRoutes.Register to { RegisterScreen(nav) },
+            NavRoutes.RoleSelect to { RoleSelectScreen(nav) },
+            NavRoutes.FarmerDashboard to { FarmerDashboardScreen(nav) },
+            NavRoutes.CreateBatch to { CreateBatchScreen(nav) },
+            NavRoutes.BatchHistory to { BatchHistoryScreen(nav) },
+            NavRoutes.DistributorDashboard to { DistributorDashboardScreen(nav) },
+            NavRoutes.QRScanner to { QRScannerScreen(nav) },
+            NavRoutes.TransferOwnership to { TransferOwnershipScreen(nav) },
+            NavRoutes.RetailerDashboard to { RetailerDashboardScreen(nav) },
+            NavRoutes.UpdatePrice to { UpdatePriceScreen(nav) },
+            NavRoutes.ConsumerDashboard to { ConsumerDashboardScreen(nav) },
+            NavRoutes.Feedback to { FeedbackScreen(nav) }
+        ).forEach { (route, screen) -> composable(route) { screen() } }
+
         composable("${NavRoutes.BatchDetail}/{batchId}",
-            arguments = listOf(navArgument("batchId") { type = NavType.StringType })
-        ) { backStackEntry ->
-            val batchId = backStackEntry.arguments?.getString("batchId") ?: ""
-            BatchDetailScreen(navController, batchId)
+            listOf(navArgument("batchId") { type = NavType.StringType })
+        ) {
+            BatchDetailScreen(nav, it.arguments?.getString("batchId") ?: "")
         }
-        composable(NavRoutes.BatchHistory) { BatchHistoryScreen(navController) }
-        composable(NavRoutes.DistributorDashboard) { DistributorDashboardScreen(navController) }
-        composable(NavRoutes.QRScanner) { QRScannerScreen(navController) }
-        composable(NavRoutes.TransferOwnership) { TransferOwnershipScreen(navController) }
-        composable(NavRoutes.RetailerDashboard) { RetailerDashboardScreen(navController) }
-        composable(NavRoutes.UpdatePrice) { UpdatePriceScreen(navController) }
-        composable(NavRoutes.ConsumerDashboard) { ConsumerDashboardScreen(navController) }
-        composable(NavRoutes.Feedback) { FeedbackScreen(navController) }
     }
 }
