@@ -4,24 +4,6 @@ KrishiChain is a **blockchain-based mobile app** that empowers farmers to track 
 
 ---
 
-## 🚀 Features
-
-- **Create Batch**
-  - Add crop type, variety, quantity, harvest date, and GPS location.
-  - Attach photos of produce for accurate records.
-
-- **QR Code Generation**
-  - Generate unique QR codes for every batch.
-  - Scan QR codes to verify authenticity instantly.
-
-- **Track Produce**
-  - Monitor crop lifecycle and transactions.
-  - Blockchain ensures tamper-proof records.
-
-- **User-Friendly Interface**
-  - Simple, light-themed design for easy navigation.
----
-
 ## 🛠 Tech Stack
 
 | Layer        | Technology |
